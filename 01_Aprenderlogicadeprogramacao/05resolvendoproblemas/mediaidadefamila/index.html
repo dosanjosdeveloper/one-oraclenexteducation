@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Idades</title>
+</head>
+<body>
+    
+    <script>
+        function pulaLinha(){
+            document.write("<br>")
+            document.write("<br>")
+        }
+
+        function escreva(msg){
+            document.write(msg);
+            pulaLinha();
+        }
+
+        function calculaMedia(qtdFamilia, somaIdades){
+            escreva(`Media de Idades é: ${somaIdades/qtdFamilia}`);
+        }
+
+        var qtdGente = parseInt(prompt("Informa a quantidade de entrevistados: "));
+        var soma=0;
+        for (var i=1;i<=qtdGente;i++){
+        var idade = parseInt(prompt("Informe a idade: "));
+        soma = soma + idade;
+        }
+
+        calculaMedia(qtdGente,soma);
+
+    </script>
+</body>
+</html>

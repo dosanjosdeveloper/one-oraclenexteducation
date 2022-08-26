@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Util Canvas</title>
+    <canvas width="600" height="400"></canvas>
+</head>
+
+<body>
+    <script>
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        var cores = ['blue', 'red', 'green']; //arrays de cores
+        var indiceCorAtual = 0; //posição zero do array começa com zero, portanto é blue
+
+        var desenha = false;
+
+        pincel.fillStyle = 'yellow';
+        pincel.fillRect(0, 0, 600, 400);
+        var raio = 10;
+        function desenhaCirculo(evento) { // Aqui a variável evento é passado pelo navegador
+
+            if(evento.onmousedown){
+                desenha = true;
+            }
+
+            if (desenha) {
+                var x = evento.pageX - tela.offsetLeft; // evento.page captura a posição do X | offset para ignorar/descartar a margim da tela no canvas
+                var y = evento.pageY - tela.offsetTop; // evento.page captura a posição do y | offset para ignorar/descartar a margim da tela no canvas
+                pincel.fillStyle = "black";
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2 * 3.14); 
+                pincel.fill(); //preenche o circulo.
+                
+            }
+
+            console.log(x+' , '+y);
+
+           
+            // alert(x+','+y); // Apresenta o ponto de click do mouse...
+            //console.log(evento);  
+
+        }
+
+        function mudaCor() {
+
+
+            //alert('Funcionou!');
+            indiceCorAtual++; //
+
+            if (indiceCorAtual >= cores.length) {
+                indiceCorAtual = 0;
+            }
+            return false;
+        }
+        // tela.onclick = desenhaCirculo; // Não necessário parenteses, pois caso inserido o mesmo vair ser chamado na inicialização do site
+
+        tela.onmousemove = desenhaCirculo; // Não necessário parenteses, pois caso inserido o mesmo vair ser chamado na inicialização do site
+
+        function habilitarDesenhar(){
+            desenha = true;
+        }
+
+        function desabilitaDesenhar(){
+            desenha = false;
+        }
+
+        tela.onmousedown = habilitarDesenhar;
+        tela.onmouseup = desabilitaDesenhar;
+
+
+        // tela.oncontextmenu = mudaCor; // Alterar cor da bolinha
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+
+
+#banner{
+    width: 100%;
+    border-radius: 50px;
+}
+
+.main{
+    padding: 30px;
+     background: #CCCCCC;
+}
+
+ p{
+    text-align: center;
+}
+
+.tit-main{
+    padding-left: 20px;
+}
+
+.fonte-plus_bkp_missao{
+    font-size: 20px;
+    
+}
+
+#missao{
+    font-size: 20px;
+}
+
+em strong{
+    color: tomato;
+}
+
+.item{
+    font-style: italic;
+    
+}
+
+.beneficios{
+    background: #FFFFFF;
+    padding: 20px;
+}
+
+.titulo-centro{
+    text-align: center;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.img_bene{
+    width: 50%;
+}

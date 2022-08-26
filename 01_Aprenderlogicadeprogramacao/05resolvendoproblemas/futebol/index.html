@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Futebol</title>
+</head>
+<body>
+    <h1>Sobre Futebol</h1>
+
+    <script>
+        function pulaLinha(){
+            document.write('<br><br>');
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var vitorias  = Number(prompt("Entre com numero de vitórias: "));
+        //var empates  = Number(prompt("Entre com numero de empates: "));
+        //pode ser usado a função "parseInt()"
+        var empates  = parseInt(prompt("Entre com numero de empates: "));
+
+        var pontos = vitorias * 3 + empates;
+
+        mostra("<h3>Pontos do seu time é: "+pontos+"</h3>");
+
+        if (pontos > 28) {
+            mostra("Time melhor que ano anterior!!!")
+        }else if(pontos === 28){
+            mostra("Time igual ao ano anterior!!!")
+        } else{
+            mostra("Time pior que ano anterior!!!")
+        }
+        
+    </script>
+</body>
+</html>

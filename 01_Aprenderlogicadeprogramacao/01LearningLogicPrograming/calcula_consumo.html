@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcool ou Gasolina</title>
+</head>
+<body>
+    <h3>Álcool ou Gasolina?</h3>
+<p>
+Chegou a hora de você enfrentar um exercício mais complexo, não? Não se preocupe, ele utiliza tudo o que você aprendeu até agora, a grande questão é a interpretação do que deve ser feito. Você não precisa dar uma resposta aqui, apenas faça o código e teste ele. Ao clicar em continuar, verá a resposta do instrutor, mas antes de fazer isso, tente resolver o problema sozinho. Vamos ao exercício?
+<br>
+1 - Crie um novo arquivo, chame-o de calcula_consumo.html e armazene-o dentro da pasta logica. Não esqueça da estrutura mínima que devemos ter para cada um dos novos programas.
+<br>
+2 - No mundo HTML adicione um título com o seguinte conteúdo:"Alccol ou Gasolina" Salve o programa e abra-o no navegador.
+<br>
+3 - Problema: Seu carro tem um tanque de 40 litros. Com gasolina e usando todo o tanque você fez um caminhoComGasolina de 480 quilômetros. Qual é o consumoDeGasolina? Para calculá-lo, divida a distância percorrida pela quantidade de litros gastos. Imprima o valor utilizando document.write. Organize as contas em variáveis.
+<br>
+4 - Com álcool, um tanque de 40 litros fez um caminhoComAlcool de 300 quilômetros. Qual é o consumoDeAlcool?
+<br>
+No mundo da programação, faz parte do papel de um programador entender um problema e materializar sua solução em código.
+<br>   
+</p>
+
+<script>
+    const tankCapacida = 40;
+    const caminhoGasolina = 480;
+    const caminhoAlcool = 300;
+    var consumoDeGasolina = caminhoGasolina/tankCapacida;
+    var consumoDeAlcool = caminhoAlcool/tankCapacida;
+
+    document.write("Com Gasolina o mesmo percorre "+consumoDeGasolina+"Km/1L.<br>");
+    document.write("Com Alcool o mesmo percorre "+consumoDeAlcool+"Km/1L.<br>");
+</script>
+</body>
+</html>

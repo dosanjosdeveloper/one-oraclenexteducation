@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura ONE - Movimentando a Bolinha</title>
+    <canvas width="600" height="400"></canvas>
+</head>
+
+<body>
+
+    <script>
+        var tela = document.querySelector('canvas'); //Recupera o canvas no HTML
+        var pincel = tela.getContext('2d'); // Tipo de Modalidade Game
+        pincel.fillStyle = 'lightgray'; // Cor da Janela
+        pincel.fillRect(0, 0, 600, 400); // Desenha a janela no tamanho definido
+
+
+        function desenhaCirculo(x, y, raio) { //coordenadasX,coordenadasY, raio do Circulo 
+            pincel.fillStyle = 'blue'; // Cor do objeto
+            pincel.beginPath(); //Inicia a pintura
+            pincel.arc(x, y, raio, 0, 2 * Math.PI); //desenho
+            pincel.fill(); // exibe na tela
+        }
+
+        function limpaTela() {
+            pincel.clearRect(0, 0, 600, 400);
+        }
+
+
+        function exibeMensagemConsole() {
+            //console.log('Chama função!!!');
+        }
+
+        var viagemX = true;
+        var viagemY = false;
+        var x = 20;
+        var y = 20;
+        function atualizaTela() {
+            limpaTela();
+            if (viagemX) {
+                if(x === 590){viagemX = false}
+                desenhaCirculo(x, 20, 10);
+                x++;
+            } 
+            
+            if(!viagemX){
+                if(x === 10){viagemX = true}
+                desenhaCirculo(x, 20, 10);
+                x--;
+            }
+
+            if(viagemY){
+                if(y === 20);
+            }
+
+
+
+            //console.log(x);
+        }
+
+        setInterval(atualizaTela, 20);
+
+        /*
+                for(var x=20; x < 600;x++){
+                    
+                    desenhaCirculo(x,20,10);
+                }
+        */
+
+    </script>
+</body>
+
+</html>

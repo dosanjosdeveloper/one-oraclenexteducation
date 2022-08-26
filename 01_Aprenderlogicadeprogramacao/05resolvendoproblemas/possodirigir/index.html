@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posso Dirigir</title>
+</head>
+<body>
+    <h1>Posso Dirigir</h1>
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var idade = parseInt(prompt("Qual é sua idade?"));
+    var temCarteira = prompt("Tem carteira? Responda S ou N");
+
+    if(idade >= 18 && temCarteira=== "S"){
+        mostra("Você est´apto para dirigir!");
+    }else{
+        mostra("Você est´apto para dirigir!");
+    }
+
+</script>
+</body>
+</html>

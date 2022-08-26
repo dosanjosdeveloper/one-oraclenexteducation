@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contato_style.css">
+    <link rel="stylesheet" href="/HTML5eCSSparte2/reset.css">
+    <title>Contato - Barbearia Alura</title>
+</head>
+
+<body>
+    <header>
+        <div class="caixa">
+            <h1><img src="img/logo.png" alt="Logo Barba"></h1>
+            <nav>
+                <ul>
+                    <li class="item"><a href="/HTML5eCSSparte2/index.html">Home</a></li>
+                    <li class="item"><a href="produtos.html">Produtos</a></li>
+                    <li class="item"><a href="https://www.google.com">Contato</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form>
+
+            <!-- Pode ser usado assim também: <label for="testeirmao">Teste de Conect</label>  -->
+            <!-- Pode ser usado assim também: <input type="text" id="testeirmao">-->
+
+            <label>Nome: <input type="text" id="nomesobrenome" class="input-padrao" required placeholder="Seu nome e sobrenome"></label>
+            <label>E-mail: <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"></label>
+            <label>Telefone: <input type="tel" id="telefone" class="input-padrao" required placeholder="(DD) XXXXX-XXXX"></label>
+
+            <label for="testearea">Mensagem:</label>
+            <textarea name="" id="testearea" cols="70" rows="10" class="input-padrao" required></textarea>
+
+            <div>
+                <p>Como prefere nosso contato?</p>
+                <label for="radio-email"><input type="radio" name="contato" value="E-mail" id="radio-email"> E-mail</label>
+                
+                <label for="radio-telefone"><input type="radio" name="contato" value="Telefone" id="radio-telefone">Telefone</label>
+                
+                <label for="radio-whathsapp"><input type="radio" name="contato" value="whathsapp" id="radio-whathsapp" checked>Whathsapp</label>
+                
+            </div>
+
+            <div>
+            
+            <label for="seletor">Qual horário prefere ser contactado?</label>
+            <select id="seletor">
+                <option value="">Manhã</option>
+                <option value="">Tarde</option>
+                <option value="">Noite</option>
+            </select>
+        </div>
+            <label class="chekbox"><input type="checkbox" checked> Gostari de receber nossas novidades por email?</label>
+
+            <input type="submit" value="Enviar Formulário" id="">
+        </form>
+    </main>
+
+    <footer>
+        <img src="img/logo-branco.png" alt="logo Copyright">
+        <p class="copia">&COPY; Copyright Barbearia Alura - 2019</p>
+    </footer>
+</body>
+
+</html>

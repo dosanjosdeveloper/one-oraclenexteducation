@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura ONE - Movimentando a Bolinha</title>
+    <canvas width="600" height="400"></canvas>
+</head>
+
+<body>
+
+    <script>
+        var tela = document.querySelector('canvas'); //Recupera o canvas no HTML
+        var pincel = tela.getContext('2d'); // Tipo de Modalidade Game
+        pincel.fillStyle = 'lightgray'; // Cor da Janela
+        pincel.fillRect(0, 0, 600, 400); // Desenha a janela no tamanho definido
+
+
+        function desenhaCirculo(x, y, raio) { //coordenadasX,coordenadasY, raio do Circulo 
+            pincel.fillStyle = 'blue'; // Cor do objeto
+            pincel.beginPath(); //Inicia a pintura
+            pincel.arc(x, y, raio, 0, 2 * Math.PI); //desenho
+            pincel.fill(); // exibe na tela
+        }
+
+        function limpaTela() {
+            pincel.fillStyle = 'lightgray'; 
+            pincel.clearRect(0, 0, 600, 400);
+            
+        }
+
+        function exibeMensagemConsole() {
+            //console.log('Chama função!!!');
+        }
+
+        var viagemX = true;
+        var viagemY = false;
+        var x = 20;
+        var y = 20;
+
+        var cima = 38;
+        var baixo = 40;
+        var esquerda = 37;
+        var direita = 39;
+        var taxa = 10;
+
+
+        function leDoTeclado(evento){
+
+            if(evento.keyCode === cima ){y=y-taxa;}
+            else if(evento.keyCode === baixo ){y=y+taxa;}
+            else if(evento.keyCode === esquerda){x=x-taxa;}
+            else if(evento.keyCode === direita){x=x+taxa;}
+
+        }
+
+        function atualizaTela() {
+          limpaTela();
+          desenhaCirculo(x,y,10);
+          //console.log(x);
+        }
+
+       setInterval(atualizaTela, 20);
+       
+        
+        document.onkeydown = leDoTeclado;
+
+    </script>
+</body>
+
+</html>

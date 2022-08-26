@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O pulso ainda pulsa ...</title>
+    <canvas width="600" height="400"></canvas>
+</head>
+
+<body>
+
+    <script>
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+        pincel.fillStyle = 'yellow';
+        pincel.fillRect(0,0,600,400);
+
+        function desenhaCirculo(x,y,raio,cor){
+            pincel.fillStyle = cor;
+            pincel.beginPath();
+            pincel.arc(x,y,raio,0,2 * Math.PI);
+            pincel.fill();
+        }
+
+        function limpaTela(){
+            pincel.clearRect(0,0,600,400);
+        }
+
+        function centro(){
+            
+            limpaTela();
+            
+            if(crescer ){ 
+                if(pulsoRay >= 50){crescer = false}
+                desenhaCirculo(300,200,pulsoRay,'red');
+                desenhaCirculo(300,200,10,'blue');
+                pulsoRay++;
+            }else{
+                if(pulsoRay <=10 ){crescer = true}
+                desenhaCirculo(300,200,pulsoRay,'red');
+                desenhaCirculo(300,200,10,'blue');
+                pulsoRay--;
+            }
+                
+            
+            
+            
+        }
+
+
+        var crescer = true;
+        var pulsoRay = 15;
+        setInterval(centro,20);
+
+
+    </script>
+
+</body>
+
+</html>

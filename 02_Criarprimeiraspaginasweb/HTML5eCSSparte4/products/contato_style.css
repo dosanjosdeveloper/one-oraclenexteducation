@@ -1,0 +1,113 @@
+header {
+    background: #BBBBBB;
+    padding: 200px 0;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+
+}
+
+nav li {
+
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #191cc7;
+    text-decoration: underline;
+}
+
+
+
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+main form {
+    margin: 40px 0;
+}
+
+form label,
+form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao {
+    border-radius: 10px;
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+footer {
+    text-align: center;
+    background: url(img/bg.jpg);
+    padding: 40px 0;
+}
+
+.chekbox {
+    margin: 20px 0;
+}
+
+.copia {
+    color: beige;
+    font: bold;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: azure;
+    font-weight: bold;
+    font-size: 19px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.5s all;
+    cursor: pointer;
+    
+}
+
+.enviar:hover {
+    background:orangered;
+    transform: rotate(10deg) scale(1.2);
+}
+
+table{
+    margin: 20px 0 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+.borda-table {
+    border: 1px solid #000000;
+    padding: 8px 15px ;
+}
