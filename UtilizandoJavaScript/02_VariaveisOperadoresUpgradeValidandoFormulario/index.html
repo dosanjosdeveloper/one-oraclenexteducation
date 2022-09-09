@@ -77,37 +77,41 @@
 				</tbody>
 			</table>
 		</section>
-
-
-
-		<section class="container">
-			<form action="" id="form-adiciona">
-				<div class="">
-					<label for="nome">Nome: </label>
-					<input type="text" id="nome" name="nome" class="campo" placeholder="Digite o nome do seu paciente.">
-				</div>
-				<div class="grupo">
-					<label for="peso">Peso: </label>
-					<input type="text" id="peso" name="peso" class="campo campo-medio"
-						placeholder="Digite o peso do seu paciente.">
-				</div>
-				<div class="grupo">
-					<label for="altura">Altura: </label>
-					<input type="text" id="altura" name="altura" class="campo campo-medio"
-						placeholder="Digite a altura do seu paciente.">
-				</div>
-				<div class="grupo">
-					<label for="gordura">>% de Gordura: </label>
-					<input type="text" id="gordura" name="gordura" class="campo campo-medio"
-						placeholder="Digite o percentual de Gordura do seu paciente.">
-				</div>
-
-
-				<button id="adicionar-paciente" class="bto-principal">Adicionar </button>
-			</form>
-
-		</section>
 	</main>
+
+
+	<section class="container">
+		<h2>Adicionar novo Paciente</h2>
+		<ul id="mensagens-erro">
+
+		</ul>
+		<form  id="form-adiciona">
+			<div class="">
+				<label for="nome">Nome: </label>
+				<input type="text" id="nome" name="nome" class="campo" placeholder="Digite o nome do seu paciente." required>
+			</div>
+			<div class="grupo">
+				<label for="peso">Peso: </label>
+				<input type="text" id="peso" name="peso" class="campo campo-medio"
+					placeholder="Digite o peso do seu paciente." required>
+			</div>
+			<div class="grupo">
+				<label for="altura">Altura: </label>
+				<input type="text" id="altura" name="altura" class="campo campo-medio"
+					placeholder="Digite a altura do seu paciente." required>
+			</div>
+			<div class="grupo">
+				<label for="gordura">>% de Gordura: </label>
+				<input type="text" id="gordura" name="gordura" class="campo campo-medio"
+					placeholder="Digite o percentual de Gordura do seu paciente." required>
+			</div>
+
+
+			<button id="adicionar-paciente" class="bto-principal">Adicionar </button>
+		</form>
+
+	</section>
+
 
 </body>
 
