@@ -45,7 +45,8 @@
         core.bare true"</p>
 
     <p><strong>Criando Branch (ramos)</strong></p>
-    <p>Comando: "git branch 'nome do ramo'" ou Execute git checkout -b lista para criar uma nova branch -> Cria ramos diferentes para que cada dev trabalhe em parte diferente
+    <p>Comando: "git branch 'nome do ramo'" ou Execute git checkout -b lista para criar uma nova branch -> Cria ramos
+        diferentes para que cada dev trabalhe em parte diferente
         do projeto, quando ambos estão idependentes na aplicação. <br>
         Para alternar entre as branchs basta digitar o comando "git checktou 'nome do ramo'".</p>
     <p><strong>Unindo a Branch alternativa com a principal 'MASTER'</strong></p>
@@ -70,20 +71,64 @@
     </ul>
     Boa sorte! ;-)
     </p>
-    <p><strong></strong></p>
-    <p></p>
-    <p><strong></strong></p>
-    <p></p>
-    <p><strong></strong></p>
-    <p></p>
-    <p><strong></strong></p>
-    <p></p>
-    <p><strong></strong></p>
-    <p></p>
-    <p><strong></strong></p>
-    <p></p>
-    <p><strong></strong></p>
-    <p></p>
+    <p><strong>Salvando Temporáriamente</strong></p>
+    <p>Vimos como podemos utilizar git stash para armazenar temporariamente algumas de nossas alterações. uando
+        precisamos pausar o desenvolvimento de alguma funcionalidade, ou correção, antes de finalizar, talvez não seja
+        interessante realizar um commit, pois o nosso código pode não estar funcionando ainda. Nesse caso é interessante
+        salvar o trabalho para podermos voltar a ele depois.</p>
+    <p><strong>Desfazer Alterações Não Necessárias</strong></p>
+    <p>Com o git checkout nós desfazemos uma alteração que ainda não foi adicionada ao index ou stage, ou seja, antes do
+        git add. Depois de adicionar com git add, para desfazer uma alteração, precisamos tirá-la deste estado, com git
+        reset. Agora, se já realizamos o commit, o comando git revert pode nos salvar.</p>
+    <p><strong>Exibindo Histórico de Coomits e Voltando No Tempo</strong></p>
+    <p>Comando: "git log --oneline".</p>
+    <p><strong>Sobre o Git Checkout</strong></p>
+    <p>A descrição do comando git checkout --help, em uma tradução livre é: "Atualizar os arquivos na working tree para
+        ficarem na versão especificada. [...]". Basicamente, podemos deixar o nosso código no estado do último commit de
+        uma branch, de um commit específico, ou mesmo tags (que veremos adiante).</p>
+    <p><strong>Tarefas a Fazer...</strong></p>
+    <p>Chegou a hora de você pôr em prática o que foi visto na aula. Para isso, execute os passos listados abaixo.</p>
+    <ul>
+        <li>1) Na pasta que representa o seu projeto, faça uma alteração qualquer no arquivo index.html;</li>
+        <li>2) Execute o git status e veja que há uma alteração para adicionar;</li>
+        <li>3) Execute o comando git checkout -- index.html. Confira se sua alteração foi desfeita;</li>
+        <li>4) Novamente, faça alguma alteração no arquivo index.html;</li>
+        <li>5) Execute o comando git add index.html;</li>
+        <li>6) Execute o comando git reset HEAD index.html para trazer o arquivo index.html de volta para a HEAD do
+            projeto (remover do stage, que é o que será enviado para o commit);</li>
+        <li>7) Repita o passo 3;</li>
+        <li>8) Faça mais uma vez alguma alteração no código;</li>
+        <li>9) Execute o comando git add index.html e o comando git commit -m "Alterando o código" para realizar um
+            commit;</li>
+        <li>10) Execute o comando git log e copie o hash deste commit recém criado;</li>
+        <li>11) Rode o comando git revert {hash}, substituindo {hash} pelo hash que você copiou anteriormente;</li>
+        <li>12) Confira que suas alterações foram desfeitas;</li>
+        <li>13) Mude o nome do curso de Ansible para "Ansible: Infraestrutura como código";</li>
+        <li>14) Execute o comando git stash para salvar estas alterações na stash;</li>
+        <li>15) Altere o nome do curso de Kubernetes para "Kubernetes: Introdução a orquestração de containers";</li>
+        <li>16) Execute o comando git add index.html e o comando git commit -m "Alterando o nome do curso de Kubernetes"
+            para realizar um commit;</li>
+        <li>17) Execute o comando git stash pop para trazer a última alteração da stash;</li>
+        <li>18) Execute o comando git add index.html e o comando git commit -m "Alterando o nome do curso de Ansible"
+            para realizar um commit;</li>
+        <li>19) Execute o comando git push local master para enviar todas as suas alterações;</li>
+        <li>20) Execute o comando git log --oneline para ver os commits de forma resumida. Copie o hash do commit de
+            merge com a branch lista;</li>
+        <li>21) Execute o comando git checkout {hash} substituindo {hash} pelo hash que você copiou;</li>
+        <li>22) Veja que diversas alterações não estão mais presentes;</li>
+        <li>23) Execute git checkout master para voltar à linha principal de desenvolvimento.</p>
+        </li>
+    </ul>
+
+    <p><strong>Vendo as Alterações</strong></p>
+    <p>git remote -v</p>
+    <p>git log -p</p>
+    <p>git log -oneline</p>
+    <p>git diff stash_inicial .. stash_final </p>
+    <p>O sinal de subtração (-) antes da linha indica que ela não está mais presente no arquivo. Já o sinal de adição (+) mostra que é uma linha nova. Alterações são representadas por uma remoção e uma adição de linha.</p>
+    <p><strong>Tags e Release</strong></p>
+    <p>Comando tag -a v0.1.0 -m "Lançando primeira versão da aplicação".</p>
+    <p>git tag -> exibe a v0.1.0, podendo ser enviada para o servidor</p>
     <p><strong></strong></p>
     <p></p>
     <p><strong></strong></p>

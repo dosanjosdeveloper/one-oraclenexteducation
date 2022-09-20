@@ -1,0 +1,14 @@
+Anotações Aprendizado HTML CSS e JavaScript da Alura (ORACLE NEXT EDUCATION - ONE)
+
+##################### HTML #########################
+
+##################### CSS ##########################
+
+###################### JS ##########################
+
+document.querySelector(""); >> O mesmo pode receber uma class, id ou a tag do HTML.
+Exemplo de utilização do document.querySelector("") com variável;
+var titulo = document.querySelector(".titulo");
+titulo.textContent = "Teste de Escrita no Header". (textContext Captura o dado do campo)
+
+###################### CANVAS ##########################
