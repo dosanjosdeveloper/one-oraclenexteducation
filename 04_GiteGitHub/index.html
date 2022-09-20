@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Git e GitHub - Lista De Plataformas</title>
 </head>
+
 <body>
     <ul>
         <li>Java</li>
@@ -19,19 +21,57 @@
         <li>MariaDB</li>
         <li>Postgres</li>
         <li>SQL Server</li>
-    </ul>    
+    </ul>
     <p><strong>Criando Repositório GIT</strong></p>
     <p>Comando: "git init" marcando diretório como versionamento de códgo.</p>
 
     <p><strong>Verificando o status do repositório no git</strong> </p>
     <p>Comando: "git status" verifica o status dos arquivos nos repositórios. <br>
-    Se vermelho, o mesmo não foi adicionado para monitoramento.</p>
+        Se vermelho, o mesmo não foi adicionado para monitoramento.</p>
     <p><strong> Adicionando arquivo para monitoramento</strong></p>
-    <p>Comando: "git add" ou "git add *". Após adicionar para monitoramento ao usar o "git status" os arquivos ficarão na cor verde aguardando commit.</p>
+    <p>Comando: "git add" ou "git add *". Após adicionar para monitoramento ao usar o "git status" os arquivos ficarão
+        na cor verde aguardando commit.</p>
     <p><strong>Executando o commit</strong></p>
-    <p>Comando: "git commit -m "Sua mensagem referencia após alteração" ". <br>Após o commit com o "git status" nem temos nada pendente de modificação.</p>
+    <p>Comando: "git commit -m "Sua mensagem referencia após alteração" ". <br>Após o commit com o "git status" nem
+        temos nada pendente de modificação.</p>
     <p><strong>Verificando o históricos de alteções.</strong></p>
     <p>Comando: "git log".</p>
+    <p><strong>Definindo um repositório Server</strong></p>
+    <p>Comando: "git init --bare <br> Com este comando nós criamos um repositório que não terá a working tree, ou seja,
+        não conterá uma cópia dos nossos arquivos.
+        Como o repositório servirá apenas como servidor, para que outros membros da equipe sincronizem seus trabalhos,
+        poupamos espaço de armazenamento desta forma. <br>
+        Caso tenha executado o comando init sem esse parâmetro, execute na sequência o seguinte comando: "git config
+        core.bare true"</p>
+
+    <p><strong>Criando Branch (ramos)</strong></p>
+    <p>Comando: "git branch 'nome do ramo'" ou Execute git checkout -b lista para criar uma nova branch -> Cria ramos diferentes para que cada dev trabalhe em parte diferente
+        do projeto, quando ambos estão idependentes na aplicação. <br>
+        Para alternar entre as branchs basta digitar o comando "git checktou 'nome do ramo'".</p>
+    <p><strong>Unindo a Branch alternativa com a principal 'MASTER'</strong></p>
+    <p>Comando: Primeiro alterne para a branch MASTER com o comando "git checkout master" e posteriormente execute o
+        comando "git merge 'branch devs'". Com esses comandos
+        o projeto se unirá ao principal, porém somente cm os 'commits' da branch master.</p>
+    <p><strong>Unindo a branch dev para a Master com os commits </strong></p>
+    <p>Comando: "git rebase titulo". Este comando faz o merge dos commits da branch dev junto aos commits a branch
+        master.</p>
+    <p>https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c.</p>
+    <p>
+        Vimos como é simples resolver conflitos identificados pelo Git ao tentar realizar o merge.
+
+        Agora, gere um conflito e, ao invés de utilizar o merge, utilize o rebase para atualizar o master:
+    <ul>
+        <li>Vá para a branch titulo</li>
+        <li>Commite algo</li>
+        <li>Vá para a branch master, commite uma alteração na mesma linha</li>
+        <li>Execute git rebase titulo</li>
+        <li>Veja a saída do Git e utilize as informações que ela te der para, após corrigir o conflito, continuar o
+            rebase.</li>
+    </ul>
+    Boa sorte! ;-)
+    </p>
+
 
 </body>
+
 </html>
